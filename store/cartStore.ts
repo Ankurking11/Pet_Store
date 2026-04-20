@@ -11,13 +11,21 @@ type CartItem = {
 };
 
 type CartState = {
+  /** Items currently present in the cart. */
   items: CartItem[];
+  /** Controls slide-in cart drawer visibility. */
   isOpen: boolean;
+  /** Adds an item to cart or increments quantity for existing item. */
   addItem: (item: Omit<CartItem, "quantity">, quantity?: number) => void;
+  /** Removes an item from cart by product id. */
   removeItem: (id: string) => void;
+  /** Updates quantity for an item and removes it when quantity reaches zero. */
   updateQuantity: (id: string, quantity: number) => void;
+  /** Clears all items from cart. */
   clearCart: () => void;
+  /** Opens cart drawer. */
   openCart: () => void;
+  /** Closes cart drawer. */
   closeCart: () => void;
 };
 

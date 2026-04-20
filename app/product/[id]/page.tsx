@@ -56,7 +56,9 @@ export default async function ProductPage({ params }: ProductPageProps) {
               {product.discount}% OFF
             </span>
           </div>
-          <p className="text-sm text-gray-600">⭐ {product.rating} Rating</p>
+          <p className="text-sm text-gray-600" aria-label={`Rated ${product.rating} out of 5 stars`}>
+            <span aria-hidden="true">⭐</span> {product.rating} Rating
+          </p>
           <p className="text-gray-700">{product.description}</p>
           <ProductDetailActions
             id={product.id}

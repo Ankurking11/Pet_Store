@@ -16,9 +16,13 @@ export default function ShopPage() {
       <p className="mt-2 text-gray-600">Premium essentials for every pet category.</p>
 
       <section className="mt-6 grid gap-3 rounded-2xl border border-gray-200 bg-white p-4 md:grid-cols-3">
-        <label className="text-sm">
+        <label htmlFor="category-filter" className="text-sm">
           <span className="mb-1 block text-gray-500">Category</span>
-          <select className="w-full rounded-lg border border-gray-300 px-3 py-2" defaultValue="All">
+          <select
+            id="category-filter"
+            className="w-full rounded-lg border border-gray-300 px-3 py-2"
+            defaultValue="All"
+          >
             <option>All</option>
             <option>Dog</option>
             <option>Cat</option>
@@ -27,18 +31,26 @@ export default function ShopPage() {
             <option>Accessories</option>
           </select>
         </label>
-        <label className="text-sm">
+        <label htmlFor="price-filter" className="text-sm">
           <span className="mb-1 block text-gray-500">Price</span>
-          <select className="w-full rounded-lg border border-gray-300 px-3 py-2" defaultValue="Any">
+          <select
+            id="price-filter"
+            className="w-full rounded-lg border border-gray-300 px-3 py-2"
+            defaultValue="Any"
+          >
             <option>Any</option>
             <option>Under ₹500</option>
             <option>₹500 - ₹1500</option>
             <option>₹1500+</option>
           </select>
         </label>
-        <label className="text-sm">
+        <label htmlFor="brand-filter" className="text-sm">
           <span className="mb-1 block text-gray-500">Brand</span>
-          <select className="w-full rounded-lg border border-gray-300 px-3 py-2" defaultValue="Any brand">
+          <select
+            id="brand-filter"
+            className="w-full rounded-lg border border-gray-300 px-3 py-2"
+            defaultValue="Any brand"
+          >
             <option>Any brand</option>
             <option>Royal Canin</option>
             <option>Pedigree</option>
