@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fffbf5;
+  --primary: #f59e0b;
+  --accent: #1f2937;
+}
+
+body {
+  background: var(--background);
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: Sora, Inter, system-ui, sans-serif;
+}
+
+section {
+  scroll-margin-top: 90px;
+}

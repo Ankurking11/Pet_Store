@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <rect width="800" height="600" rx="36" fill="#FFF7E8"/>
+  <circle cx="400" cy="270" r="120" fill="#F59E0B" fill-opacity="0.28"/>
+  <rect x="220" y="430" width="360" height="56" rx="16" fill="#1F2937" fill-opacity="0.9"/>
+  <text x="400" y="467" text-anchor="middle" font-size="32" fill="#FFFFFF" font-family="Arial, sans-serif">Pet's Bay &amp; Co</text>
+</svg>
