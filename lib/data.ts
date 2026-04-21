@@ -11,11 +11,11 @@ export type Product = {
 };
 
 export const categories = [
-  { name: "Dog", image: "/products/dog.svg" },
-  { name: "Cat", image: "/products/cat.svg" },
-  { name: "Birds", image: "/products/birds.svg" },
-  { name: "Fish", image: "/products/fish.svg" },
-  { name: "Accessories", image: "/products/accessories.svg" },
+  { name: "Dog", image: "/category-dog-food.jpg" },
+  { name: "Cat", image: "/category-cat-toys.jpg" },
+  { name: "Birds", image: "/category-birds.jpg" },
+  { name: "Fish", image: "/category-fish.jpg" },
+  { name: "Accessories", image: "/category-accessories.jpg" },
 ] as const;
 
 export const products: Product[] = [
@@ -26,7 +26,7 @@ export const products: Product[] = [
     discount: 12,
     category: "Dog",
     brand: "Royal Canin",
-    image: "/products/royal-canin.svg",
+    image: "/products/royal-canin.jpg",
     rating: 4.9,
     description:
       "Nutrient-rich premium dry food formulated for large breed adult dogs with healthy digestion support.",
@@ -38,7 +38,7 @@ export const products: Product[] = [
     discount: 15,
     category: "Dog",
     brand: "Pedigree",
-    image: "/products/pedigree.svg",
+    image: "/products/pedigree.jpg",
     rating: 4.7,
     description:
       "Balanced everyday nutrition with quality proteins and vitamins for active dogs.",
@@ -50,7 +50,7 @@ export const products: Product[] = [
     discount: 10,
     category: "Cat",
     brand: "Whiskas",
-    image: "/products/cat-food.svg",
+    image: "/products/cat-food.jpg",
     rating: 4.8,
     description:
       "Tuna-flavored complete cat food crafted for coat health, immunity, and taste cats love.",
@@ -62,7 +62,7 @@ export const products: Product[] = [
     discount: 8,
     category: "Birds",
     brand: "Nutripet",
-    image: "/products/bird-feed.svg",
+    image: "/products/bird-feed.jpg",
     rating: 4.6,
     description:
       "Fresh seed blend for parrots and finches with natural minerals and energy-rich grains.",
@@ -74,7 +74,7 @@ export const products: Product[] = [
     discount: 5,
     category: "Fish",
     brand: "Aqua Gold",
-    image: "/products/fish-food.svg",
+    image: "/products/fish-food.jpg",
     rating: 4.5,
     description:
       "Floating pellets designed for improved color, growth, and clear water nutrition.",
@@ -86,7 +86,7 @@ export const products: Product[] = [
     discount: 20,
     category: "Accessories",
     brand: "PawPlay",
-    image: "/products/toy.svg",
+    image: "/products/toy.jpg",
     rating: 4.8,
     description:
       "Soft yet durable tug toy ideal for chewing, fetch, and indoor engagement.",
@@ -98,7 +98,7 @@ export const products: Product[] = [
     discount: 18,
     category: "Accessories",
     brand: "CozyPaws",
-    image: "/products/bed.svg",
+    image: "/products/bed.jpg",
     rating: 4.9,
     description:
       "Memory foam support bed with removable washable cover for premium sleep comfort.",
@@ -110,7 +110,7 @@ export const products: Product[] = [
     discount: 11,
     category: "Accessories",
     brand: "FelineHome",
-    image: "/products/scratcher.svg",
+    image: "/products/scratcher.jpg",
     rating: 4.7,
     description:
       "Space-saving scratching post that protects furniture and supports healthy claws.",
