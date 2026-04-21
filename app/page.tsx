@@ -95,14 +95,6 @@ export default function Home() {
       </FadeInSection>
 
       <FadeInSection>
-        <div className="grid gap-4 rounded-2xl border border-gray-200/80 bg-white p-4 text-sm text-gray-700 shadow-sm sm:grid-cols-3">
-          <p>⭐ 5.0 Rating (124 Reviews)</p>
-          <p>🚚 Fast Delivery</p>
-          <p>💰 Best Prices</p>
-        </div>
-      </FadeInSection>
-
-      <FadeInSection>
         <div>
           <div className="mb-6 flex items-end justify-between">
             <h2 className="text-2xl font-semibold text-gray-900">Shop by Category</h2>
