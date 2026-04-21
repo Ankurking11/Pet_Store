@@ -1,0 +1,42 @@
+<svg width="900" height="620" viewBox="0 0 900 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="900" y2="620" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF1D6"/>
+      <stop offset="1" stop-color="#FFE0B3"/>
+    </linearGradient>
+    <radialGradient id="spot" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(680 210) rotate(127) scale(250 260)">
+      <stop stop-color="#FFD18A"/>
+      <stop offset="1" stop-color="#FFD18A" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="900" height="620" rx="42" fill="url(#bg)"/>
+  <rect x="30" y="30" width="840" height="560" rx="36" fill="#FFF9EE"/>
+  <circle cx="690" cy="220" r="210" fill="url(#spot)"/>
+
+  <rect x="80" y="70" width="320" height="42" rx="21" fill="#FFF1D9"/>
+  <circle cx="112" cy="91" r="7" fill="#FDBA74"/>
+  <rect x="128" y="84" width="220" height="14" rx="7" fill="#F59E0B" fill-opacity="0.25"/>
+
+  <path d="M440 380C440 300 505 236 585 236H650C730 236 795 300 795 380V390H440V380Z" fill="#F59E0B" fill-opacity="0.24"/>
+  <ellipse cx="617" cy="346" rx="160" ry="132" fill="#F7B65D"/>
+  <ellipse cx="617" cy="360" rx="145" ry="118" fill="#F2A13D"/>
+
+  <circle cx="566" cy="336" r="17" fill="#2D1B0E"/>
+  <circle cx="668" cy="336" r="17" fill="#2D1B0E"/>
+  <circle cx="560" cy="330" r="5" fill="#FFF"/>
+  <circle cx="662" cy="330" r="5" fill="#FFF"/>
+
+  <ellipse cx="617" cy="375" rx="34" ry="25" fill="#FEE2E2"/>
+  <path d="M598 371L617 386L636 371" stroke="#A16207" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M570 392H592" stroke="#A16207" stroke-width="4" stroke-linecap="round"/>
+  <path d="M642 392H664" stroke="#A16207" stroke-width="4" stroke-linecap="round"/>
+
+  <path d="M528 232L562 158L588 236Z" fill="#F2A13D"/>
+  <path d="M705 232L671 158L645 236Z" fill="#F2A13D"/>
+  <path d="M541 225L560 184L574 228Z" fill="#FCD9A6"/>
+  <path d="M692 225L673 184L659 228Z" fill="#FCD9A6"/>
+
+  <rect x="88" y="430" width="350" height="120" rx="24" fill="#FFFFFF"/>
+  <text x="116" y="472" fill="#111827" font-family="Inter, sans-serif" font-size="34" font-weight="700">Playful. Healthy. Happy.</text>
+  <text x="116" y="511" fill="#6B7280" font-family="Inter, sans-serif" font-size="22">Premium care for your furry family.</text>
+</svg>

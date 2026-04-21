@@ -1,0 +1,8 @@
+<svg width="520" height="340" viewBox="0 0 520 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="520" height="340" rx="28" fill="#FFF1DB"/>
+  <text x="30" y="58" fill="#7C2D12" font-family="Inter, sans-serif" font-size="28" font-weight="700">Treat Time</text>
+  <rect x="30" y="82" width="460" height="226" rx="20" fill="#FFF9EF"/>
+  <circle cx="160" cy="200" r="60" fill="#FDBA74"/>
+  <circle cx="268" cy="200" r="46" fill="#FCD9A6"/>
+  <circle cx="350" cy="204" r="36" fill="#F59E0B" fill-opacity="0.35"/>
+</svg>

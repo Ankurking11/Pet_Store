@@ -1,0 +1,9 @@
+<svg width="560" height="420" viewBox="0 0 560 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="560" height="420" rx="30" fill="#FFF3DE"/>
+  <text x="34" y="66" fill="#7C2D12" font-family="Inter, sans-serif" font-size="30" font-weight="700">Toy Corner</text>
+  <rect x="34" y="94" width="492" height="292" rx="22" fill="#FFF9EF"/>
+  <circle cx="186" cy="250" r="64" fill="#FCD9A6"/>
+  <circle cx="302" cy="238" r="52" fill="#FDBA74"/>
+  <circle cx="386" cy="262" r="46" fill="#F59E0B" fill-opacity="0.3"/>
+  <path d="M154 300L188 264L220 300" stroke="#9A3412" stroke-width="6" stroke-linecap="round"/>
+</svg>
