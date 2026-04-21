@@ -5,6 +5,7 @@ import { useCartStore } from "@/store/cartStore";
 
 const links = [
   { href: "/", label: "Home" },
+  { href: "/#gallery", label: "Gallery" },
   { href: "/shop", label: "Shop" },
   { href: "/store", label: "Store" },
 ];
