@@ -1,4 +1,5 @@
-<svg width="900" height="620" viewBox="0 0 900 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="900" height="620" viewBox="0 0 900 620" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="hero-title">
+  <title id="hero-title">Illustration of a happy pet with the message Playful, Healthy, Happy and premium care for your furry family.</title>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="900" y2="620" gradientUnits="userSpaceOnUse">
       <stop stop-color="#FFF1D6"/>

@@ -75,12 +75,18 @@ export default function Home() {
                 </a>
               </div>
               <div className="mt-8 grid gap-3 text-sm text-gray-700 sm:grid-cols-3">
-                <p className="rounded-xl border border-amber-200 bg-white/80 px-3 py-2">⭐ 5.0 Rating</p>
-                <p className="rounded-xl border border-amber-200 bg-white/80 px-3 py-2">🚚 Fast Delivery</p>
-                <p className="rounded-xl border border-amber-200 bg-white/80 px-3 py-2">💰 Best Prices</p>
+                <p className="rounded-xl border border-amber-200 bg-white/80 px-3 py-2">
+                  <span aria-hidden="true">⭐</span> <span className="sr-only">5 star rated: </span>5.0 Rating
+                </p>
+                <p className="rounded-xl border border-amber-200 bg-white/80 px-3 py-2">
+                  <span aria-hidden="true">🚚</span> <span className="sr-only">Service feature: </span>Fast Delivery
+                </p>
+                <p className="rounded-xl border border-amber-200 bg-white/80 px-3 py-2">
+                  <span aria-hidden="true">💰</span> <span className="sr-only">Value feature: </span>Best Prices
+                </p>
               </div>
             </div>
-            <div className="relative h-[320px] overflow-hidden rounded-3xl border border-amber-100 bg-white/70 shadow-sm sm:h-[420px]">
+            <figure className="relative h-[320px] overflow-hidden rounded-3xl border border-amber-100 bg-white/70 shadow-sm sm:h-[420px]">
               <Image
                 src="/gallery/hero-pet-care.svg"
                 alt="Pet care hero illustration"
@@ -89,7 +95,7 @@ export default function Home() {
                 sizes="(max-width: 1024px) 100vw, 45vw"
                 className="object-cover"
               />
-            </div>
+            </figure>
           </div>
         </div>
       </FadeInSection>
