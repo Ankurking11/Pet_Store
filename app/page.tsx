@@ -17,7 +17,7 @@ const galleryMoments = [
   {
     src: "/gallery/pet-play-2.svg",
     title: "Snack pick at the store",
-    className: "sm:col-span-1 sm:row-span-2 lg:col-span-1 lg:row-span-3",
+    className: "sm:col-span-1 sm:row-span-2 lg:col-span-1 lg:row-span-2",
   },
   {
     src: "/gallery/pet-play-3.svg",
@@ -32,12 +32,12 @@ const galleryMoments = [
   {
     src: "/gallery/pet-play-5.svg",
     title: "Treat time smiles",
-    className: "sm:col-span-1 sm:row-span-1 lg:col-span-1 lg:row-span-1",
+    className: "sm:col-span-2 sm:row-span-1 lg:col-span-1 lg:row-span-1",
   },
   {
     src: "/gallery/pet-play-6.svg",
     title: "Happy checkout moment",
-    className: "sm:col-span-2 sm:row-span-1 lg:col-span-2 lg:row-span-2",
+    className: "sm:col-span-2 sm:row-span-2 lg:col-span-3 lg:row-span-1",
   },
 ];
 
@@ -149,7 +149,7 @@ export default function Home() {
               Visit store
             </Link>
           </div>
-          <div className="grid auto-rows-[120px] grid-cols-1 gap-3 [grid-auto-flow:dense] sm:grid-cols-2 lg:grid-cols-4 lg:gap-4">
+          <div className="grid auto-rows-[120px] grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 lg:gap-4">
             {galleryMoments.map((moment) => (
               <article
                 key={moment.src}
