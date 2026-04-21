@@ -17,31 +17,33 @@ export default function ProductCard({ product }: ProductCardProps) {
 
   return (
     <motion.article
-      whileHover={{ y: -4, scale: 1.01 }}
+      whileHover={{ y: -6, scale: 1.02 }}
       transition={{ duration: 0.2 }}
-      className="group rounded-2xl border border-gray-100 bg-white p-4 shadow-sm"
+      className="group rounded-2xl border border-gray-200 bg-white overflow-hidden shadow-md hover:shadow-xl transition"
     >
       <Link href={`/product/${product.id}`} className="block">
-        <div className="relative mb-4 aspect-square overflow-hidden rounded-xl bg-[#FFF7E8]">
+        <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
           <Image
             src={product.image}
             alt={product.name}
             fill
             sizes="(max-width: 768px) 100vw, 25vw"
-            className="object-cover transition duration-300 group-hover:scale-105"
+            className="object-cover transition duration-300 group-hover:scale-110"
           />
-          <span className="absolute left-3 top-3 rounded-full bg-amber-500 px-2.5 py-1 text-xs font-semibold text-white">
+          <span className="absolute left-3 top-3 rounded-full bg-orange-500 px-3 py-1 text-xs font-bold text-white shadow-lg">
             -{product.discount}%
           </span>
         </div>
-        <p className="mb-1 text-xs font-medium uppercase tracking-wide text-gray-500">{product.category}</p>
-        <h3 className="line-clamp-2 text-base font-semibold text-gray-900">{product.name}</h3>
-        <div className="mt-2 flex items-center gap-2 text-sm">
-          <span className="font-semibold text-gray-900">{formatCurrency(discountedPrice)}</span>
-          <span className="text-gray-400 line-through">{formatCurrency(product.price)}</span>
+        <div className="p-4">
+          <p className="text-xs font-semibold uppercase tracking-widest text-gray-500 mb-2">{product.category}</p>
+          <h3 className="line-clamp-2 text-base font-bold text-gray-900 mb-3">{product.name}</h3>
+          <div className="flex items-baseline gap-2 mb-4">
+            <span className="text-lg font-bold text-gray-900">{formatCurrency(discountedPrice)}</span>
+            <span className="text-sm text-gray-400 line-through">{formatCurrency(product.price)}</span>
+          </div>
         </div>
       </Link>
-      <div className="mt-4 grid grid-cols-2 gap-2">
+      <div className="px-4 pb-4 grid grid-cols-2 gap-2">
         <button
           type="button"
           onClick={() =>
@@ -52,7 +54,7 @@ export default function ProductCard({ product }: ProductCardProps) {
               price: discountedPrice,
             })
           }
-          className="rounded-xl bg-gray-900 px-3 py-2 text-sm font-medium text-white transition hover:bg-gray-700"
+          className="rounded-lg bg-gray-900 px-3 py-2.5 text-sm font-semibold text-white transition hover:bg-gray-800 active:scale-95"
         >
           Add to Cart
         </button>
@@ -60,7 +62,7 @@ export default function ProductCard({ product }: ProductCardProps) {
           href={getOrderLink(product.name)}
           target="_blank"
           rel="noreferrer"
-          className="rounded-xl border border-amber-300 bg-amber-50 px-3 py-2 text-center text-sm font-medium text-amber-700 transition hover:bg-amber-100"
+          className="rounded-lg border border-orange-300 bg-orange-50 px-3 py-2.5 text-center text-sm font-semibold text-orange-700 transition hover:bg-orange-100"
         >
           WhatsApp
         </a>

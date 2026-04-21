@@ -30,8 +30,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full scroll-smooth">
-      <body className="min-h-full bg-[#FFFBF5] text-gray-900 antialiased">
+    <html lang="en" className="h-full scroll-smooth bg-white">
+      <body className="min-h-full bg-white text-gray-900 antialiased">
         <Navbar />
         <PageTransition>
           <main className="flex-1">{children}</main>
