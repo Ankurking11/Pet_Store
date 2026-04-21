@@ -1,0 +1,9 @@
+<svg width="560" height="420" viewBox="0 0 560 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="560" height="420" rx="30" fill="#FFEFD7"/>
+  <text x="36" y="68" fill="#7C2D12" font-family="Inter, sans-serif" font-size="30" font-weight="700">Evening Walk</text>
+  <rect x="36" y="98" width="488" height="286" rx="24" fill="#FFF8EA"/>
+  <circle cx="148" cy="146" r="32" fill="#FCD34D" fill-opacity="0.5"/>
+  <rect x="86" y="246" width="384" height="82" rx="20" fill="#FDBA74" fill-opacity="0.3"/>
+  <ellipse cx="230" cy="246" rx="70" ry="52" fill="#F59E0B" fill-opacity="0.35"/>
+  <ellipse cx="332" cy="246" rx="70" ry="52" fill="#F59E0B" fill-opacity="0.35"/>
+</svg>

@@ -1,0 +1,9 @@
+<svg width="700" height="360" viewBox="0 0 700 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="700" height="360" rx="28" fill="#FFE9C6"/>
+  <text x="42" y="70" fill="#7C2D12" font-family="Inter, sans-serif" font-size="31" font-weight="700">Happy Checkout</text>
+  <text x="42" y="108" fill="#9A3412" font-family="Inter, sans-serif" font-size="20">Pets and parents leaving with favorites.</text>
+  <rect x="42" y="136" width="616" height="184" rx="20" fill="#FFF8EC"/>
+  <ellipse cx="250" cy="228" rx="82" ry="56" fill="#F59E0B" fill-opacity="0.3"/>
+  <ellipse cx="402" cy="228" rx="74" ry="50" fill="#FDBA74"/>
+  <ellipse cx="520" cy="236" rx="54" ry="38" fill="#FCD9A6"/>
+</svg>

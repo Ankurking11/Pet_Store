@@ -1,0 +1,17 @@
+<svg width="520" height="740" viewBox="0 0 520 740" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="520" height="740" rx="34" fill="#FFEED3"/>
+  <text x="42" y="74" fill="#7C2D12" font-family="Inter, sans-serif" font-size="34" font-weight="700">Snack Pick</text>
+  <text x="42" y="112" fill="#9A3412" font-family="Inter, sans-serif" font-size="20">Cat choosing food at the shelf.</text>
+  <rect x="40" y="150" width="440" height="520" rx="26" fill="#FFF8EC"/>
+  <rect x="76" y="198" width="108" height="44" rx="12" fill="#FBBF24" fill-opacity="0.35"/>
+  <rect x="206" y="198" width="108" height="44" rx="12" fill="#F59E0B" fill-opacity="0.25"/>
+  <rect x="336" y="198" width="108" height="44" rx="12" fill="#EA580C" fill-opacity="0.25"/>
+  <ellipse cx="260" cy="430" rx="142" ry="120" fill="#FDBA74"/>
+  <circle cx="210" cy="410" r="15" fill="#1F2937"/>
+  <circle cx="308" cy="410" r="15" fill="#1F2937"/>
+  <circle cx="206" cy="405" r="4" fill="#FFF"/>
+  <circle cx="304" cy="405" r="4" fill="#FFF"/>
+  <ellipse cx="260" cy="453" rx="25" ry="16" fill="#FECACA"/>
+  <path d="M247 452L260 464L273 452" stroke="#92400E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="72" y="566" width="376" height="62" rx="18" fill="#F59E0B" fill-opacity="0.2"/>
+</svg>
