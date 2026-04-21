@@ -9,28 +9,20 @@ import { WHATSAPP_BASE } from "@/lib/utils";
 
 const galleryMoments = [
   {
-    src: "/gallery/pets-playing.jpg",
+    src: "/gallery-dog-cat-playing.jpg",
     title: "Playtime at the store",
   },
   {
-    src: "/gallery/lifestyle-1.jpg",
+    src: "/gallery-customer-with-pet.jpg",
     title: "Shopping with family",
   },
   {
-    src: "/gallery/product-shelf.jpg",
+    src: "/gallery-product-display.jpg",
     title: "Premium products",
   },
   {
-    src: "/gallery/happy-pet.jpg",
-    title: "Joy and happiness",
-  },
-  {
-    src: "/gallery/pet-play-1.svg",
-    title: "Park adventures",
-  },
-  {
-    src: "/gallery/pet-play-2.svg",
-    title: "Store moments",
+    src: "/gallery/pets-playing.jpg",
+    title: "Happy moments",
   },
 ];
 
@@ -187,43 +179,25 @@ export default function Home() {
               <p className="text-lg text-gray-600">Happy pets, happy families</p>
             </div>
             <div className="grid auto-rows-[250px] gap-4 sm:auto-rows-[300px] lg:gap-6">
-              {/* Large featured image */}
-              <div className="lg:col-span-2 lg:row-span-2 rounded-2xl overflow-hidden shadow-xl">
-                <Image
-                  src="/gallery-dog-cat-playing.jpg"
-                  alt="Dogs and cats playing"
-                  fill
-                  className="object-cover hover:scale-110 transition duration-500"
-                />
-              </div>
-              
-              {/* Gallery grid */}
-              <div className="rounded-2xl overflow-hidden shadow-lg">
-                <Image
-                  src="/gallery-customer-with-pet.jpg"
-                  alt="Customer with pet"
-                  fill
-                  className="object-cover hover:scale-110 transition duration-500"
-                />
-              </div>
-              
-              <div className="rounded-2xl overflow-hidden shadow-lg">
-                <Image
-                  src="/gallery-product-display.jpg"
-                  alt="Product display"
-                  fill
-                  className="object-cover hover:scale-110 transition duration-500"
-                />
-              </div>
-              
-              <div className="lg:col-span-2 rounded-2xl overflow-hidden shadow-lg">
-                <Image
-                  src="/gallery/pets-playing.jpg"
-                  alt="Pets playing"
-                  fill
-                  className="object-cover hover:scale-110 transition duration-500"
-                />
-              </div>
+              {galleryMoments.map((moment, idx) => (
+                <div
+                  key={moment.src}
+                  className={`relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition group ${
+                    idx === 0 ? "lg:col-span-2 lg:row-span-2" : ""
+                  }`}
+                >
+                  <Image
+                    src={moment.src}
+                    alt={moment.title}
+                    fill
+                    sizes="(max-width: 768px) 50vw, 25vw"
+                    className="object-cover group-hover:scale-110 transition duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition flex items-end p-4">
+                    <p className="text-lg font-bold text-white">{moment.title}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
