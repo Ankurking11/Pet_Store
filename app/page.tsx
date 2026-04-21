@@ -4,7 +4,6 @@ import FadeInSection from "@/components/FadeInSection";
 import CategoryCard from "@/components/CategoryCard";
 import ProductCard from "@/components/ProductCard";
 import ReviewCard from "@/components/ReviewCard";
-import ScrollPetSides from "@/components/ScrollPetSides";
 import { categories, offers, products, reviews } from "@/lib/data";
 import { WHATSAPP_BASE } from "@/lib/utils";
 
@@ -37,157 +36,240 @@ const galleryMoments = [
 
 export default function Home() {
   return (
-    <div className="mx-auto w-full max-w-7xl space-y-28 px-4 py-8 pb-28 sm:px-6 lg:px-8 md:pb-12">
-      <ScrollPetSides />
+    <div className="min-h-screen bg-gradient-to-b from-stone-50 via-white to-orange-50">
+      {/* Hero Section */}
       <FadeInSection>
-        <div className="relative overflow-hidden rounded-3xl bg-white shadow-lg">
-          <div className="grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
-            <div className="p-6 md:p-10 lg:p-12">
-              <p className="mb-4 inline-flex rounded-full border border-orange-200 bg-orange-50 px-4 py-2 text-xs font-bold tracking-widest text-orange-700 uppercase">
-                Welcome to pet's bay
-              </p>
-              <h1 className="text-4xl lg:text-5xl xl:text-6xl font-black text-gray-900 leading-tight mb-4">
-                Happy pets.
-                <br />
-                <span className="text-orange-500">Better days.</span>
-              </h1>
-              <p className="text-lg text-gray-600 mb-8 leading-relaxed max-w-md">
-                Premium food, toys, and pet care essentials in Balewadi, Pune. Everything your furry friends need in one cozy place.
-              </p>
-              <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap mb-8">
-                <Link
-                  href="/shop"
-                  className="rounded-lg bg-gray-900 px-8 py-4 text-center text-sm font-bold text-white shadow-lg transition hover:bg-gray-800 active:scale-95"
-                >
-                  Shop Now
-                </Link>
-                <a
-                  href={WHATSAPP_BASE}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="rounded-lg border-2 border-orange-500 bg-white px-8 py-4 text-center text-sm font-bold text-orange-600 transition hover:bg-orange-50"
-                >
-                  Order via WhatsApp
-                </a>
+        <div className="relative overflow-hidden pt-20 pb-32 lg:pt-28 lg:pb-40">
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute top-0 left-1/3 w-96 h-96 bg-orange-200/30 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-yellow-200/20 rounded-full blur-3xl"></div>
+          </div>
+          
+          <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100 border border-orange-200 mb-6">
+                  <span className="text-2xl">🐾</span>
+                  <span className="text-sm font-semibold text-orange-700">Welcome to Pet's Bay</span>
+                </div>
+                <h1 className="text-5xl lg:text-6xl xl:text-7xl font-black text-gray-900 leading-tight mb-6">
+                  Your Pet&apos;s
+                  <br />
+                  <span className="bg-gradient-to-r from-orange-400 via-orange-500 to-red-500 bg-clip-text text-transparent">Happy Place</span>
+                </h1>
+                <p className="text-xl text-gray-600 mb-8 max-w-lg leading-relaxed">
+                  Premium pet food, toys & care products in Balewadi. Everything your furry friend deserves, all in one cozy store.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Link
+                    href="/shop"
+                    className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold rounded-full hover:shadow-lg hover:scale-105 transition transform"
+                  >
+                    Shop Now 🛍️
+                  </Link>
+                  <a
+                    href={WHATSAPP_BASE}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center justify-center px-8 py-4 border-2 border-green-500 text-green-600 font-bold rounded-full hover:bg-green-50 transition"
+                  >
+                    WhatsApp Order 💬
+                  </a>
+                </div>
+              </div>
+              
+              <div className="relative h-[400px] lg:h-[500px]">
+                <div className="absolute inset-0 rounded-3xl overflow-hidden shadow-2xl">
+                  <Image
+                    src="/hero-premium-dog.jpg"
+                    alt="Happy dog in pet store"
+                    fill
+                    priority
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                </div>
               </div>
             </div>
-            <figure className="relative h-[320px] sm:h-[400px] lg:h-[500px] overflow-hidden rounded-3xl">
-              <Image
-                src="/hero-dog.jpg"
-                alt="Happy dog in pet store"
-                fill
-                priority
-                sizes="(max-width: 1024px) 100vw, 45vw"
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
-            </figure>
           </div>
         </div>
       </FadeInSection>
 
+      {/* Categories Section */}
       <FadeInSection>
-        <div>
-          <div className="mb-8 flex items-end justify-between">
-            <h2 className="text-3xl lg:text-4xl font-black text-gray-900">Shop by Category</h2>
-            <Link href="/shop" className="text-sm font-bold text-orange-600 hover:text-orange-700">
-              View all →
-            </Link>
-          </div>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
-            {categories.map((category) => (
-              <CategoryCard key={category.name} name={category.name} image={category.image} />
-            ))}
-          </div>
-        </div>
-      </FadeInSection>
-
-      <FadeInSection>
-        <div>
-          <div className="mb-8 flex items-end justify-between">
-            <h2 className="text-3xl lg:text-4xl font-black text-gray-900">Featured Products</h2>
-            <Link href="/shop" className="text-sm font-bold text-orange-600 hover:text-orange-700">
-              View all →
-            </Link>
-          </div>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {products.slice(0, 4).map((product) => (
-              <ProductCard key={product.id} product={product} />
-            ))}
-          </div>
-        </div>
-      </FadeInSection>
-
-      <FadeInSection>
-        <section id="gallery" className="rounded-3xl bg-white p-8 md:p-12 shadow-lg">
-          <div className="mb-10">
-            <h2 className="text-3xl lg:text-4xl font-black text-gray-900 mb-2">Pet Moments Gallery</h2>
-            <p className="text-lg text-gray-600">
-              Playtime, shopping adventures, and happy moments from our community.
-            </p>
-          </div>
-          <div className="grid auto-rows-[180px] grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {galleryMoments.map((moment, idx) => (
-              <article
-                key={moment.src}
-                className={`group relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-100 to-gray-50 shadow-md hover:shadow-xl transition ${
-                  idx === 0 ? "lg:col-span-2 lg:row-span-2" : idx === 1 ? "lg:row-span-2" : ""
-                }`}
-              >
-                <Image
-                  src={moment.src}
-                  alt={moment.title}
-                  fill
-                  sizes="(max-width: 768px) 50vw, 25vw"
-                  className="object-cover transition duration-300 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex items-end opacity-0 group-hover:opacity-100 transition">
-                  <p className="text-sm font-bold text-white p-4">{moment.title}</p>
-                </div>
-              </article>
-            ))}
+        <section className="py-20 lg:py-28 px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl lg:text-5xl font-black text-gray-900 mb-4">Shop by Category</h2>
+              <p className="text-lg text-gray-600">Find everything your pet needs</p>
+            </div>
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
+              {categories.map((category) => (
+                <CategoryCard key={category.name} name={category.name} image={category.image} />
+              ))}
+            </div>
           </div>
         </section>
       </FadeInSection>
 
+      {/* Featured Products */}
       <FadeInSection>
-        <div className="rounded-3xl bg-gradient-to-r from-gray-900 to-gray-800 px-8 py-12 text-white shadow-lg md:p-16">
-          <h2 className="text-3xl lg:text-4xl font-black mb-6">This Week&apos;s Special Offers</h2>
-          <ul className="grid sm:grid-cols-2 gap-4 text-base">
-            {offers.map((offer) => (
-              <li key={offer} className="flex items-start gap-3">
-                <span className="text-orange-400 font-bold text-xl mt-1">✓</span>
-                <span>{offer}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </FadeInSection>
-
-      <FadeInSection>
-        <div>
-          <h2 className="text-3xl lg:text-4xl font-black text-gray-900 mb-8">What Pet Parents Say</h2>
-          <div className="grid gap-6 md:grid-cols-3">
-            {reviews.map((review) => (
-              <ReviewCard key={review.id} name={review.name} text={review.text} rating={review.rating} />
-            ))}
+        <section className="py-20 lg:py-28 px-4 sm:px-6 lg:px-8 bg-white">
+          <div className="mx-auto max-w-7xl">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl lg:text-5xl font-black text-gray-900 mb-4">Featured Products</h2>
+              <p className="text-lg text-gray-600">Handpicked essentials for your pets</p>
+            </div>
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {products.slice(0, 4).map((product) => (
+                <ProductCard key={product.id} product={product} />
+              ))}
+            </div>
+            <div className="text-center mt-12">
+              <Link
+                href="/shop"
+                className="inline-flex items-center gap-2 px-8 py-4 text-orange-600 font-bold hover:text-orange-700 transition"
+              >
+                View All Products →
+              </Link>
+            </div>
           </div>
-        </div>
+        </section>
       </FadeInSection>
 
+      {/* Special Offers with Image */}
       <FadeInSection>
-        <div className="rounded-3xl border-2 border-orange-200 bg-gradient-to-br from-orange-50 to-white p-10 text-center shadow-lg md:p-16">
-          <h2 className="text-3xl lg:text-4xl font-black text-gray-900 mb-4">Visit Our Store</h2>
-          <p className="text-lg text-gray-600 mb-8 max-w-md mx-auto">
-            Experience our premium collection in person in Balewadi, Pune. Get expert guidance from our passionate team.
-          </p>
-          <Link
-            href="/store"
-            className="inline-flex rounded-lg bg-gray-900 px-8 py-4 text-sm font-bold text-white shadow-lg hover:bg-gray-800 transition"
-          >
-            Get Directions
-          </Link>
-        </div>
+        <section className="py-20 lg:py-28 px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl">
+            <div className="grid lg:grid-cols-2 gap-12 items-center bg-gradient-to-br from-orange-500 via-orange-400 to-red-400 rounded-3xl overflow-hidden shadow-2xl">
+              <div className="p-8 lg:p-12 text-white">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 border border-white/30 mb-6 mb-8">
+                  <span className="text-2xl">⚡</span>
+                  <span className="text-sm font-semibold">This Week's Hot Deals</span>
+                </div>
+                <h2 className="text-4xl lg:text-5xl font-black mb-6">Exclusive Offers</h2>
+                <ul className="space-y-4 mb-8 text-lg">
+                  {offers.map((offer) => (
+                    <li key={offer} className="flex items-start gap-3">
+                      <span className="text-2xl mt-1">✓</span>
+                      <span>{offer}</span>
+                    </li>
+                  ))}
+                </ul>
+                <a
+                  href={WHATSAPP_BASE}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-white text-orange-600 font-bold rounded-full hover:shadow-lg transition"
+                >
+                  Claim Your Deal 🎉
+                </a>
+              </div>
+              <div className="relative h-[350px] lg:h-[450px] overflow-hidden">
+                <Image
+                  src="/special-offer-dog.jpg"
+                  alt="Playful dog with special offers"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+      </FadeInSection>
+
+      {/* Gallery Section */}
+      <FadeInSection>
+        <section className="py-20 lg:py-28 px-4 sm:px-6 lg:px-8 bg-white">
+          <div className="mx-auto max-w-7xl">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl lg:text-5xl font-black text-gray-900 mb-4">Pet Moments Gallery</h2>
+              <p className="text-lg text-gray-600">Happy pets, happy families</p>
+            </div>
+            <div className="grid auto-rows-[250px] gap-4 sm:auto-rows-[300px] lg:gap-6">
+              {/* Large featured image */}
+              <div className="lg:col-span-2 lg:row-span-2 rounded-2xl overflow-hidden shadow-xl">
+                <Image
+                  src="/gallery-dog-cat-playing.jpg"
+                  alt="Dogs and cats playing"
+                  fill
+                  className="object-cover hover:scale-110 transition duration-500"
+                />
+              </div>
+              
+              {/* Gallery grid */}
+              <div className="rounded-2xl overflow-hidden shadow-lg">
+                <Image
+                  src="/gallery-customer-with-pet.jpg"
+                  alt="Customer with pet"
+                  fill
+                  className="object-cover hover:scale-110 transition duration-500"
+                />
+              </div>
+              
+              <div className="rounded-2xl overflow-hidden shadow-lg">
+                <Image
+                  src="/gallery-product-display.jpg"
+                  alt="Product display"
+                  fill
+                  className="object-cover hover:scale-110 transition duration-500"
+                />
+              </div>
+              
+              <div className="lg:col-span-2 rounded-2xl overflow-hidden shadow-lg">
+                <Image
+                  src="/gallery/pets-playing.jpg"
+                  alt="Pets playing"
+                  fill
+                  className="object-cover hover:scale-110 transition duration-500"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+      </FadeInSection>
+
+      {/* Reviews */}
+      <FadeInSection>
+        <section className="py-20 lg:py-28 px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl lg:text-5xl font-black text-gray-900 mb-4">What Pet Parents Say</h2>
+              <p className="text-lg text-gray-600">Real reviews from our happy customers</p>
+            </div>
+            <div className="grid gap-8 md:grid-cols-3">
+              {reviews.map((review) => (
+                <ReviewCard key={review.id} name={review.name} text={review.text} rating={review.rating} />
+              ))}
+            </div>
+          </div>
+        </section>
+      </FadeInSection>
+
+      {/* CTA Section */}
+      <FadeInSection>
+        <section className="py-20 lg:py-28 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-indigo-600">
+          <div className="mx-auto max-w-4xl text-center text-white">
+            <h2 className="text-4xl lg:text-5xl font-black mb-6">Visit Our Store</h2>
+            <p className="text-xl mb-8 opacity-90">
+              Experience our premium collection in person. Our expert team is ready to help you find the perfect products for your furry friends!
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/store"
+                className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 font-bold rounded-full hover:shadow-lg transition"
+              >
+                Get Directions 📍
+              </Link>
+              <a
+                href="tel:+918484086474"
+                className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-bold rounded-full hover:bg-white/10 transition"
+              >
+                Call Us 📞
+              </a>
+            </div>
+          </div>
+        </section>
       </FadeInSection>
     </div>
   );
