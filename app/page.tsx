@@ -76,7 +76,7 @@ export default function Home() {
               </div>
               <div className="mt-8 grid gap-3 text-sm text-gray-700 sm:grid-cols-3">
                 <p className="rounded-xl border border-amber-200 bg-white/80 px-3 py-2">
-                  <span aria-hidden="true">⭐</span> <span className="sr-only">5 star rated: </span>5.0 Rating
+                  <span aria-hidden="true">⭐</span> <span className="sr-only">5 star rating: </span>5.0 Rating
                 </p>
                 <p className="rounded-xl border border-amber-200 bg-white/80 px-3 py-2">
                   <span aria-hidden="true">🚚</span> <span className="sr-only">Service feature: </span>Fast Delivery
